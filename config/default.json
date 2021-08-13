@@ -9,7 +9,8 @@
     "secret-key": "secret-key-app-chat-realtime",
     "email":{
         "SENDGRID_API_KEY": "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",
-        "userAd": "sang04407@gmail.com"
+        "userAd": "sang04407@gmail.com",
+        "userAc": "sangnguyencrom@gmail.com"
     }
 
 }

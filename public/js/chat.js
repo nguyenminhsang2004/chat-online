@@ -82,7 +82,7 @@ $(function(){
                 let result = JSON.parse(res.responseText);
                 imageLink = "/" + result.filePath;
                 $('.imageUserBackground').attr('src',imageLink);
-                $('label#fileNameImageUser').html(result.fileName.slice(result.fileName.lastIndexOf('-') + 1 ));
+                $('label#fileNameImageUser').html(result.fileName);
                 $('.'+ toSlug(userName) + '-' + idUser).attr('src',imageLink);
 
                 let data = {

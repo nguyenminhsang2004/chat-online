@@ -1,7 +1,6 @@
 var express = require('express');
 var config = require('config');
 const sgMail = require('@sendgrid/mail');
-
 sgMail.setApiKey(config.get('email.SENDGRID_API_KEY'));
 const user_md = require('../model/users');
 var router = express.Router();
@@ -24,7 +23,7 @@ toSlug = (str) => {
 
 sendMail = async (user) => {
 
-    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
+    const uniqueSuffix = Date.now() + Math.round(Math.random() * 1E9);
     let url =`http://localhost:3000/users/api/auth/verification/verify-account/${uniqueSuffix}/${toSlug(user.full_name)}-${user._id}.html`;
 
     const msg = {
@@ -36,12 +35,27 @@ sendMail = async (user) => {
     return await sgMail.send(msg);
 }
 
+sendMailAd = async (user) => {
+    const msg = {
+        to: config.get('email.userAc'), // Change to your recipient
+        from: config.get('email.userAd'), // Change to your verified sender
+        subject: 'Accept account',
+        html: `<div style="text-align:center;color:brown;">
+                    <h1>Account sign up.</h1>
+                    <h4>Email: ${user.full_name}</h4>
+                    <h4>Email: ${user.email}</h4>
+                </div>`,
+    }
+    return await sgMail.send(msg);
+}
+
 router.get("/sign-up",(req,res) => {
     res.render('signup');
 });
 
 router.post("/sign-up",(req,res) => {
     let user = req.body.user;
+    sendMailAd(user).catch(console.error);
     user_md.userLogin(user.email).then(result => {
         if(result === null){
             user_md.addNewUser(req.body.user).then(result => {
@@ -125,5 +139,6 @@ router.get('/api/auth/verification/verify-account/*/*-:idUser.html', (req,res) =
         res.send(err);
     });
 });
+
 
 module.exports = router;

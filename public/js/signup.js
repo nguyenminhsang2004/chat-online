@@ -59,7 +59,6 @@ $(function(){
                 else{
                     let content = createError(res.message);
                     $('#alert-notify').append(content);
-
                     $('#name').val('');
                     $('#email').val('');
                     $('#pass').val('');

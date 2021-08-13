@@ -4,7 +4,6 @@ var bodyParser = require('body-parser');
 var socketIo = require('socket.io');
 var session = require('express-session');
 const mongoose = require('mongoose');
-
 var app = express();
 
 const maxAge = 1000 * 60 * 60;
@@ -50,3 +49,4 @@ var server = app.listen(process.env.PORT || port, host, () => {
 var io = socketIo(server);
 
 var socketControl = require('./apps/common/socketControl')(io);
+
