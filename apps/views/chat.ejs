@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/public/images/icon.ico" />
+    <title id='<%= data.id %> ' name='<%= data.fullName  %>' >Chat Room</title>
+    <link rel="stylesheet" href="/public/vendor/bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/public/scss/chat.css">
+    <link rel="stylesheet" href="/public/css/emojionearea.min.css">
+</head>
+<body>
+    <div class="container-fluid" style="margin-top: .2rem;">
+        <div id="user-online">
+            <ul id="list-users">
+                
+            </ul>
+        </div>
+        <div class="toast toast-content" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong id="toastTitle" class="mr-auto">No title</strong>
+                <button id="btnCloseNotify" type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="toast-body" id="toastContent">
+                No message
+            </div>
+        </div>
+        <div class="content" id="content">
+            <ul class="content-chat form-control" id="content-message-chat">
+                
+            </ul>
+            <div class="row">
+                <div class="col-sm-10 mb-4">
+                    <form class="input-group mb-0 form-message">
+                        <textarea style="display: none;" class="form-control" type="text" id="message" cols="30" rows="2" placeholder="Message"></textarea>
+                    </form>
+                </div>
+                <div class="col-sm-2 mb-4">
+                    <div class="custom-file form-group" style="margin-bottom: .6rem;">
+                        <input type="file" class="custom-file-input image-user-change" id="customFile">
+                        <label class="custom-file-label" for="customFile" id="fileNameImageUser">Choose file</label>
+                    </div>
+                    <form class="form-group">
+                        <a href="/sign-out" class="btn btn-danger mb-4" id="btnSignOut"><i class="fa fa-sign-out"></i> Leave</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/public/vendor/jquery-3.5.1.js"></script>
+    <script src="/public/vendor/socket.io.min.js"></script>
+    <script src="/public/vendor/bootstrap.js"></script>
+    <script src="/public/js/emojionearea.min.js"></script>
+    <script src="/public/js/chat.js"></script>
+    <style>
+        .emojionearea.form-control {
+            height: 5.5rem;
+        }
+        #btnSignOut {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+    </style>
+
+</body>
+</html>

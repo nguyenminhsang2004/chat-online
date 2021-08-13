@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  width: 100%;
+  height: 100%; }
+
+.background-image {
+  background: url(/public/images/background.jpg);
+  height: 100%;
+  width: 100%;
+  background-size: cover; }
+
+.btnJoinChat {
+  width: 12rem;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  padding: .5rem .5rem;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 0 0.5rem #c0392b;
+  background-color: #27ae60;
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+  text-decoration: none;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer; }
+  .btnJoinChat:hover {
+    background-color: #45be78;
+    font-size: 3.5rem;
+    font-family: 'Tahoma';
+    color: #c0392b; }
+
+/*# sourceMappingURL=home.css.map */

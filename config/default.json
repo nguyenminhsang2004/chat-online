@@ -1,0 +1,15 @@
+{
+    "server": {
+        "host": "0.0.0.0",
+        "port": 3000
+    },
+    "mongodb": {
+        "urlConnect": "mongodb+srv://sangnmit2004:AuIwcuaaosm5XCI1@cluster0.9b1l1.mongodb.net/db-app-chat-realtime?retryWrites=true&w=majority"
+    },
+    "secret-key": "secret-key-app-chat-realtime",
+    "email":{
+        "SENDGRID_API_KEY": "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",
+        "userAd": "sang04407@gmail.com"
+    }
+
+}

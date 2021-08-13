@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/public/images/icon.ico" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/public/vendor/bootstrap.css">
+    <link rel="stylesheet" href="/public/fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="signup-content">
+            <div class="signup-form">
+                <h2 class="form-title">Sign Up</h2>
+                <form>
+                    <div class="form-group" id="alert-notify">
+                       
+                    </div>
+                    <div class="form-group">
+                        <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                        <input required type="text" id="name" placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email"><i class="zmdi zmdi-email"></i></label>
+                        <input required type="email" id="email" placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                        <input required type="password" id="pass" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                        <input required type="password" id="repass" placeholder="Repeat your password">
+                    </div>
+                    <div class="form-group form-button">
+                        <input type="reset" id="btnSignUp" class="form-submit" value="Register">
+                    </div>
+                </form>
+            </div>
+            <div class="signup-image">
+                <figure><img src="/public/images/signup-image.jpg" alt="sing up image"></figure>
+                <a href="/sign-in" class="signup-image-link">Sign in now</a>
+            </div>
+        </div>
+    </div>
+    <script src="/public/vendor/jquery-3.5.1.js"></script>
+    <script src="/public/vendor/jquery.md5.js"></script>
+    <script src="/public/vendor/bootstrap.js"></script>
+    <script src="/public/js/signup.js"></script>
+</body>
+</html>
