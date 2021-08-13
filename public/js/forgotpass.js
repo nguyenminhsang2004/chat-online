@@ -48,7 +48,7 @@ $(function(){
             }).always((res) => {
                 console.log(res)
                 if(res.status === 200){
-                    window.location.replace("http://localhost:3000/sign-in");
+                    window.location.replace("http://localhost:3000/users/sign-in");
                     //window.location.replace("https://app-chat-online.herokuapp.com/sign-in");
                 }
                 else{

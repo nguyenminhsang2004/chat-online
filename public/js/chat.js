@@ -71,7 +71,7 @@ $(function(){
             var formData = new FormData();
             formData.append('image', fileData);
             $.ajax({
-                url:"/change-image",
+                url:"/chat-room/change-image",
                 dataType: 'text/html',
                 cache: false,
                 contentType: false,

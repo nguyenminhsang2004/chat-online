@@ -57,7 +57,7 @@ $(function(){
             }).always((res) => {
                 if(res.statusCode === 200){   
                     const uniqueSuffix = $.md5(Date.now() + Math.round(Math.random() * 1E9));
-                    window.location.replace("http://localhost:3000/chat/" + uniqueSuffix + "/" + toSlug(res.user.full_name) + "." + res.user._id + ".html");
+                    window.location.replace("http://localhost:3000/chat-room/chat/" + uniqueSuffix + "/" + toSlug(res.user.full_name) + "." + res.user._id + ".html");
                     //window.location.replace("https://app-chat-online.herokuapp.com/chat/" + uniqueSuffix + "/" + toSlug(res.user.full_name) + "." + res.user._id + ".html");
                 }
                 else{
