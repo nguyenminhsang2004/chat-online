@@ -27,3 +27,5 @@ router.get("/chat/*/*.:idUser.html",(req,res) => {
     }
     else res.redirect('/');
 });
+
+module.exports = router;

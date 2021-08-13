@@ -39,8 +39,6 @@ mongoose.connection.on('connected', () => {
     console.log("Mongoose is connected !!!");
 });
 
-process.env.SENDGRID_API_KEY = config.get('email.SENDGRID_API_KEY');
-
 let host = config.get('server.host');
 
 let port = config.get('server.port');

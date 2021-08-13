@@ -2,7 +2,7 @@ var express = require('express');
 var config = require('config');
 const sgMail = require('@sendgrid/mail');
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+sgMail.setApiKey(config.get('email.SENDGRID_API_KEY'));
 const user_md = require('../model/users');
 var router = express.Router();
 
@@ -125,3 +125,5 @@ router.get('/api/auth/verification/verify-account/*/*-:idUser.html', (req,res) =
         res.send(err);
     });
 });
+
+module.exports = router;

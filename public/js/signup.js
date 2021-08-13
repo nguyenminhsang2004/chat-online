@@ -48,7 +48,7 @@ $(function(){
             };
             $.ajax({
                 type: "POST",
-                url: "/sign-up",
+                url: "/users/sign-up",
                 data: {user:_user},
                 dataType: "JSON"
             }).always((res) => {

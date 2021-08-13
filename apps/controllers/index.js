@@ -1,5 +1,4 @@
 var express = require('express');
-const user_md = require('../model/users');
 var router = express.Router();
 
 router.use('/users', require(__dirname + '/users'));

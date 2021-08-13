@@ -42,7 +42,7 @@ $(function(){
             };
             $.ajax({
                 type: "POST",
-                url: "/forgot-password",
+                url: "/users/forgot-password",
                 data: {user:_user},
                 dataType: "JSON"
             }).always((res) => {
